@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style/style.css">
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+	<script src="scripts/createLink.js" defer></script>
+	<script src="scripts/script.js" defer></script>
+</head>
+<body>
+	<div class="screen">
+		<div class="main-screen">
+			<div class="main-screen__container">
+				<div class="app-name">
+					<h1 style="display:flex; flex-direction: column;">Link shortener</h1>
+				</div>
+				<div class="main-screen__description">
+					<p>Quickly shorten a link to a page on the Internet, turning it from large to small in a couple of clicks. Just paste it into the box below and copy.</p>
+				</div>
+				<div class="shortener">
+					<div class="shortener__link-input">
+						<input class="link-input__text" id="linkInput" type="text" placeholder="Enter the link you want to shorten.">
+						<button class="link-input__button" id="shorten">
+							Shorten
+						</button>
+					</div>
+					<p class="link-input__ivalid-link" id="invalidLink">You have entered an invalid link</p>
+					<div class="shortener__link-viewer" id="linkViewer" style="display: none;">
+						<div class="shortener__link-viewer__container">
+							<a href="#" class="shortener__short-link" id="shortenedLink" target="_blank">
+								<div class="short-link_container">
+									<div class="short-link__link">
+										<svg xmlns="http://www.w3.org/2000/svg" class="shortener__short-link-image" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+											<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+											<path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+										</svg>
+										<span class="shortener__short-link-text" id="shortenedLinkText">
+											shortener.com/gdDFe
+										</span>
+									</div>
+								</div>
+							</a>
+							<div class="shortener__button-group">
+								<button class="text-copier__copy" id="copyLink">
+									Copy
+								</button>
+								<button class="text-copier__share" id="shareLink">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-copier__share-image">
+										<circle cx="18" cy="5" r="3"></circle>
+										<circle cx="6" cy="12" r="3"></circle>
+										<circle cx="18" cy="19" r="3"></circle>
+										<line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+										<line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
